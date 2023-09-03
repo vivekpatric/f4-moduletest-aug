@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToHistory, clearHistory } from '../redux/actions';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom to create links
-import Loader from './Loader';
+
 
 const History = () => {
   const dispatch = useDispatch();
