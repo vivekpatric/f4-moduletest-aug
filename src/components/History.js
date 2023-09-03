@@ -8,10 +8,10 @@ const History = () => {
   const dispatch = useDispatch();
   const searchedWords = useSelector((state) => state.searchedWords);
 
-  const handleClearHistory = () => {
-    // Dispatch the clearHistory action to clear the history
-    dispatch(clearHistory());
-  };
+//   const handleClearHistory = () => {
+//     // Dispatch the clearHistory action to clear the history
+//     dispatch(clearHistory());
+//   };
 
   const handleWordClick = (word) => {
     // Check if the word is already in the history
@@ -27,17 +27,17 @@ const History = () => {
   return (
     <div>
       <h2>Search History</h2>
-      <ul>
+      <div>
         {uniqueWords.map((word, index) => (
-          <li key={index}>
+          <p key={index}>
             {/* Use Link to navigate to the WordDetails page */}
             <Link to={`/word/${word}`} onClick={() => handleWordClick(word)}>
               {word}
             </Link>
-          </li>
+          </p>
         ))}
-      </ul>
-      <button onClick={handleClearHistory}>Clear History</button>
+      </div>
+      {/* <button onClick={handleClearHistory}>Clear History</button> */}
     </div>
   );
 };

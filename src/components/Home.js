@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { searchWord, addToHistory } from '../redux/actions';
 import { fetchWordDetails } from '../services/dictionaryService';
 import Loader from './Loader';
-
+import '../App.css';
 const Home = () => {
   const dispatch = useDispatch();
   const [searchTerm, setSearchTerm] = useState('');
@@ -41,39 +41,41 @@ const Home = () => {
 
   return (
     <div>
-      <input
+      <div className="bar">
+      <center>   
+      <input 
         type="text"
+        className="input"
         placeholder="Enter a word"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button>
-
+      
+      <button className="button" onClick={handleSearch}>Search</button>
+      </center>
+      </div> 
       {isLoading && <Loader />}
 
       {wordDetails && (
-        <div>
-          <h2>Word Details: {wordDetails.word}</h2>
-          <h3>Phonetics:</h3>
+        <div className='details'>
+          <h2>{wordDetails.word}</h2>
           {wordDetails.phonetics.map((phonetic, index) => (
             <div key={index}>
               <p>{phonetic.text}</p>
               {phonetic.audio && <audio src={phonetic.audio} controls />}
             </div>
           ))}
-
-          <h3>Meanings:</h3>
           {wordDetails.meanings.map((meaning, index) => (
             <div key={index}>
-              <p>Part of Speech: {meaning.partOfSpeech}</p>
-              <ul>
+              <h2>{meaning.partOfSpeech}</h2>
+              
                 {meaning.definitions.map((definition, defIndex) => (
-                  <li key={defIndex}>
-                    <p>Definition: {definition.definition}</p>
-                    {definition.example && <p>Example: {definition.example}</p>}
-                  </li>
+                  <p key={defIndex}>
+                    <p>{definition.definition}</p>
+                    {definition.example && <p>{definition.example}</p>}
+                  </p>
                 ))}
-              </ul>
+             
             </div>
           ))}
         </div>
