@@ -49,11 +49,12 @@
   color: aliceblue;
 }
 .link{
-  padding-top: 20px;
+  padding-top: 17px;
   padding-right: 30px;
 }
 h4{
-  font-size: large;
+  margin: 4px;
+  font-size: 32px;
   color: aliceblue;
   padding-left: 30px;
 }
@@ -77,6 +78,9 @@ h4{
   padding: 8px 20px;
 }
 .details{
-  border: #61dafb;
-  box-shadow: #282c34;
+  background-color: #fff; /* Set background color */
+  padding: 20px; /* Add padding for spacing inside the item */
+  margin: 10px; /* Add margin for spacing between items */
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow */
 }

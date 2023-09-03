@@ -57,7 +57,7 @@ const Home = () => {
       {isLoading && <Loader />}
 
       {wordDetails && (
-        <div className='details'>
+        <div className="details">
           <h2>{wordDetails.word}</h2>
           {wordDetails.phonetics.map((phonetic, index) => (
             <div key={index}>
