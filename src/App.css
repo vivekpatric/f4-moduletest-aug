@@ -84,3 +84,41 @@ h4{
   border-radius: 5px; /* Add rounded corners */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow */
 }
+
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.para{
+  padding: 0px;
+  margin: 0px;
+}
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #333;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg);}
+}
+
+
+@media screen and (min-width:0px) and (max-width:350px) {
+  .navbar{
+    font-size: 7px
+  }
+  .input .button{
+    width: -webkit-fill-available;
+  }
+  .audio{
+    width: -webkit-fill-available;
+  }
+}

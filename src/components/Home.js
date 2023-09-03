@@ -62,7 +62,7 @@ const Home = () => {
           {wordDetails.phonetics.map((phonetic, index) => (
             <div key={index}>
               <p>{phonetic.text}</p>
-              {phonetic.audio && <audio src={phonetic.audio} controls />}
+              {phonetic.audio && <audio className="audio" src={phonetic.audio} controls />}
             </div>
           ))}
           {wordDetails.meanings.map((meaning, index) => (
@@ -70,9 +70,9 @@ const Home = () => {
               <h2>{meaning.partOfSpeech}</h2>
               
                 {meaning.definitions.map((definition, defIndex) => (
-                  <p key={defIndex}>
-                    <p>{definition.definition}</p>
-                    {definition.example && <p>{definition.example}</p>}
+                  <p key={defIndex} className='para'>
+                    <p className='para'>{definition.definition}</p>
+                    {definition.example && <p className='para'>{definition.example}</p>}
                   </p>
                 ))}
              

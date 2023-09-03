@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchWordDetails } from '../services/dictionaryService';
 import Loader from './Loader';
-
+import '../App.css';
 const WordDetails = () => {
   const { word } = useParams();
   const [wordDetails, setWordDetails] = useState(null);
@@ -30,11 +30,11 @@ const WordDetails = () => {
       {isLoading && <Loader />}
 
       {wordDetails && (
-        <div>
+        <div className="details">
           {wordDetails.phonetics.map((phonetic, index) => (
             <div key={index}>
               <p>{phonetic.text}</p>
-              {phonetic.audio && <audio src={phonetic.audio} controls />}
+              {phonetic.audio && <audio className="audio" src={phonetic.audio} controls />}
             </div>
           ))}
 
@@ -42,9 +42,9 @@ const WordDetails = () => {
             <div key={index}>
               <h2>{meaning.partOfSpeech}</h2>
                 {meaning.definitions.map((definition, defIndex) => (
-                  <p key={defIndex}>
-                    <p>{definition.definition}</p>
-                    {definition.example && <p>{definition.example}</p>}
+                  <p key={defIndex} className='para' >
+                    <p className='para'>{definition.definition}</p>
+                    {definition.example && <p className='para'>{definition.example}</p>}
                     
                   </p>
                 ))}
