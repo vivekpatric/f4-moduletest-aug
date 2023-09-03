@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgb(66, 66, 66);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -39,7 +39,7 @@
 
 .navbar{
   display: flex;
-  background-color: black;
+  background-color: rgb(44, 44, 44);
   justify-content: space-between;
   
 }
@@ -74,12 +74,12 @@ h4{
 }
 .button{
   color: aliceblue;
-  background-color: black;
+  background-color: rgb(44, 44, 44);
   padding: 8px 20px;
 }
 .details{
   background-color: #fff; /* Set background color */
-  padding: 20px; /* Add padding for spacing inside the item */
+  padding: 0px; /* Add padding for spacing inside the item */
   margin: 10px; /* Add margin for spacing between items */
   border-radius: 5px; /* Add rounded corners */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow */

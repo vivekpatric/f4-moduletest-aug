@@ -61,13 +61,13 @@ const Home = () => {
           <h2>{wordDetails.word}</h2>
           {wordDetails.phonetics.map((phonetic, index) => (
             <div key={index}>
-              <p>{phonetic.text}</p>
+              <p className='para'>{phonetic.text}</p>
               {phonetic.audio && <audio className="audio" src={phonetic.audio} controls />}
             </div>
           ))}
           {wordDetails.meanings.map((meaning, index) => (
             <div key={index}>
-              <h2>{meaning.partOfSpeech}</h2>
+              <h2 className='para'>{meaning.partOfSpeech}</h2>
               
                 {meaning.definitions.map((definition, defIndex) => (
                   <p key={defIndex} className='para'>
